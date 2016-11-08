@@ -26,13 +26,19 @@ class Point{
         }
 
 };
-
+Point operator-(const Point c,const Point u){
+            Point w(0,0);
+            w.ponerx(c.getx()-u.getx());
+            w.ponery(c.gety()-u.gety());
+            return w;
+}
 Point operator+(const Point o,const Point u){
             Point w(0,0);
             w.ponerx(o.getx()+u.getx());
             w.ponery(o.gety()+u.gety());
             return w;
 }
+
 ostream& operator<<(ostream &output,const Point &v){
     output << "X:" << v.getx() <<'\t'<< "Y:" << v.gety();
     return output;
